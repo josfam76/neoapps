@@ -1,0 +1,384 @@
+{
+  "apps": [
+    {
+      "id": "pulse-monitor",
+      "name": "Pulse Monitor",
+      "version": "1.0.10",
+      "tagline": "A clean, at-a-glance hardware monitor for Windows.",
+      "description": "Pulse Monitor detects your hardware at startup and shows the most important live readings on a single screen, with no scrolling. CPU, GPU, memory and drive load sit next to temperatures, power draw and fan speeds, along with top processes and network info. Pick from three themes (Ultra Modern, Retro and RetroAmp), choose which cards to show, and drag them into the layout you like. The app remembers that layout the next time it starts.",
+      "features": [
+        "CPU, GPU, memory and drive usage with temperatures, power (W) and fan speeds (RPM)",
+        "Automatic hardware detection at startup",
+        "Drive cards with type, used space and read/write activity",
+        "Top Processes card, sortable by CPU, memory or disk",
+        "Network card with speeds, local and public IP, gateway, DNS, link speed and Wi-Fi SSID",
+        "Three themes: Ultra Modern, Retro and RetroAmp",
+        "Show or hide cards, pick a theme, and reset to defaults",
+        "Drag and drop to reorder cards; window size, position and card order are saved",
+        "Low CPU use, and it pauses while minimized",
+        "Optional PawnIO driver for full sensor access (the app can install it for you)"
+      ],
+      "requirements": [
+        "Windows 10 or 11, 64-bit",
+        ".NET 8 Desktop Runtime (x64)",
+        "Administrator rights (needed to read hardware sensors)",
+        "PawnIO driver for full sensor readings (optional; the app can install it)"
+      ],
+      "run": "Unzip and run PulseMonitor/bin/PulseMonitor.exe.",
+      "download": "https://github.com/josfam76/neoapps/releases/download/pulse-monitor-1.0.10/PulseMonitor-1.0.10.zip",
+      "filename": "PulseMonitor-1.0.10.zip",
+      "sizeBytes": 2391571,
+      "screenshot": "images/pulse-monitor.png",
+      "screenshotCaption": null,
+      "icon": null,
+      "placeholder": false,
+      "comingSoon": false,
+      "prerelease": false,
+      "changelog": [
+        {
+          "version": "1.0.10",
+          "date": "",
+          "changes": [
+            "Window size, position and maximized state are remembered",
+            "Drag a card onto another to reorder; the order is saved",
+            "Settings → Reset to defaults clears the saved layout"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "neoplay",
+      "name": "NeoPlay",
+      "version": "1.0.9",
+      "tagline": "A retro tracker module and audio player for Windows, with modern themes and internet radio.",
+      "description": "NeoPlay plays classic tracker modules (MOD, XM, S3M, IT and more) and everyday audio files in a FastTracker 2-inspired interface with a scrolling pattern view, VU meters and retro visualizers. It has built-in internet radio with Amiga, C64 and demoscene stations first, plus normal genres. It's portable and switches between the FastTracker, Ultra Modern and Retro themes.",
+      "features": [
+        "Tracker modules via libopenmpt: MOD, XM, S3M, IT, MPTM, MED, OKT and many more",
+        "Audio files: MP3, FLAC, WAV, AIFF, OGG Vorbis, Opus, M4A/AAC, WMA",
+        "Internet radio with Amiga, C64 and demoscene stations first, plus normal genres, favorites and your own stations",
+        "Scrolling FastTracker 2-style pattern view with per-channel mute/solo and VU meters",
+        "9 retro visualizers, plus an Off option",
+        "Three themes: FastTracker, Ultra Modern and Retro (Ctrl+T)",
+        "Playlist with folders, drag and drop, repeat and shuffle",
+        "Single instance: double-clicking another file plays it in the open window",
+        "Always On Top option, zoom, and Full/Half window sizes",
+        "Portable: unzip and run, nothing is written to the registry"
+      ],
+      "requirements": [
+        "Windows 10 or 11, 64-bit",
+        ".NET 8 Desktop Runtime (x64)",
+        "Microsoft Visual C++ 2015–2022 Redistributable (x64), needed for tracker modules"
+      ],
+      "run": "Unzip and run NeoPlay/NeoPlay.exe. There is no installer.",
+      "download": "https://github.com/josfam76/neoapps/releases/download/neoplay-1.0.9/NeoPlay_1.0.9.zip",
+      "filename": "NeoPlay_1.0.9.zip",
+      "sizeBytes": 2976296,
+      "screenshot": "images/neoplay.png",
+      "screenshotCaption": "Preview mockup. The header shows 1.0.8.",
+      "icon": null,
+      "placeholder": false,
+      "comingSoon": false,
+      "prerelease": false,
+      "changelog": [
+        {
+          "version": "1.0.9",
+          "date": "2026-11-04",
+          "changes": [
+            "Single instance, so a double-clicked file plays in the already-open window",
+            "Solid pop-up dialogs in every theme",
+            "New Always On Top option in CFG (off by default)",
+            "Ultra Modern and Retro text now drawn as whole labels"
+          ]
+        },
+        {
+          "version": "1.0.8",
+          "date": "2026-11-04",
+          "changes": [
+            "Renamed from RetroAmp to NeoPlay; settings move to %APPDATA%\\NeoPlay, with a one-time import from RetroAmp and ModPlayer",
+            "Three themes: FastTracker, Ultra Modern and Retro (Ctrl+T)",
+            "About is now its own solid window, in the current theme"
+          ]
+        },
+        {
+          "version": "1.0.7",
+          "date": "2026-11-04",
+          "changes": [
+            "New visualizer mode Off, to save CPU",
+            "Fix: AAC/AAC+ internet radio now plays on Windows"
+          ]
+        },
+        {
+          "version": "1.0.6",
+          "date": "2026-11-03",
+          "changes": [
+            "Fix: switching radio stations fully closes the previous station"
+          ]
+        },
+        {
+          "version": "1.0.5",
+          "date": "2026-11-03",
+          "changes": [
+            "Internet radio with categories, search, favorites and your own stations",
+            "Demoscene, chiptune, Amiga and C64 stations first, plus Radio Browser",
+            "MP3, AAC, Ogg and Opus streams, playlist support and automatic reconnect"
+          ]
+        },
+        {
+          "version": "1.0.4",
+          "date": "2026-11-03",
+          "changes": [
+            "Dark window frame on Windows 10 and 11"
+          ]
+        },
+        {
+          "version": "1.0.3",
+          "date": "2026-11-03",
+          "changes": [
+            "Up/Down change the volume; click the time display to toggle elapsed and remaining",
+            "Scroller shows the app, version, song title and artist"
+          ]
+        },
+        {
+          "version": "1.0.2",
+          "date": "2026-11-03",
+          "changes": [
+            "Renamed from ModPlayer to RetroAmp",
+            "Bigger FastTracker-style scrollbars",
+            "9 switchable visualizers"
+          ]
+        },
+        {
+          "version": "1.0.1",
+          "date": "2026-11-02",
+          "changes": [
+            "Half-size layout for small screens, zoom, and drag-and-drop onto the playlist"
+          ]
+        },
+        {
+          "version": "1.0.0",
+          "date": "",
+          "changes": [
+            "First release (as ModPlayer)"
+          ]
+        }
+      ],
+      "mockup": true
+    },
+    {
+      "id": "nicebackup",
+      "name": "NiceBackup",
+      "version": "2.0.0",
+      "tagline": "Simple, reliable Windows backups with full version history.",
+      "description": "NiceBackup mirrors the folders you choose to a NAS or another drive using robocopy. It keeps older and deleted files in dated archive folders for as long as you decide. Backup sets run on a schedule (they can wake the PC from sleep) or from the tray. A restore window lets you pick any version of any file, and a shadow copy option lets backups include files that are open. Ultra Modern and Windows Classic themes, 11 languages.",
+      "features": [
+        "Mirrors the folders you choose to a NAS or another drive using robocopy",
+        "Keeps older and deleted files in dated archive folders for as long as you decide",
+        "Backup sets run on a schedule — they can wake the PC from sleep — or from the tray",
+        "Restore window to pick any version of any file",
+        "Shadow copy option so backups can include files that are open",
+        "Ultra Modern and Windows Classic themes",
+        "11 languages"
+      ],
+      "requirements": [
+        "Windows 10 or 11, 64-bit",
+        ".NET 8 Desktop Runtime (x64)"
+      ],
+      "run": "Unzip and run NiceBackup/NiceBackup.exe.",
+      "download": "https://github.com/josfam76/neoapps/releases/download/nicebackup-2.0.0/NiceBackup-2.0.0-win-x64.zip",
+      "filename": "NiceBackup-2.0.0-win-x64.zip",
+      "sizeBytes": 550169,
+      "screenshot": "images/nicebackup.png",
+      "screenshotCaption": null,
+      "icon": "images/nicebackup-icon.png",
+      "placeholder": false,
+      "comingSoon": false,
+      "prerelease": true,
+      "changelog": [
+        {
+          "version": "2.0.0",
+          "date": "2026-11-10",
+          "changes": [
+            "2.0.0 rebuild: example paths in hints, samples and docs made generic. No functional changes."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "neograb",
+      "name": "NeoGrab",
+      "version": "1.0.1",
+      "tagline": "A sleek, modern downloader for YouTube and 1000+ sites, powered by yt-dlp.",
+      "description": "NeoGrab is a Windows desktop front-end for yt-dlp with the Ultra Modern dark-glass look. Paste a link, pick video or audio format and quality, choose a folder (defaults to the app's own folder) and download with live progress. It fetches the latest yt-dlp from GitHub on first run (plus Deno, and offers ffmpeg), has a one-click yt-dlp update button, and keeps settings in a portable config.json.",
+      "features": [
+        "Paste a link, pick video or audio format and quality, and download with live progress",
+        "YouTube and 1000+ other sites, powered by yt-dlp",
+        "Fetches the latest yt-dlp on first run, plus Deno, and offers ffmpeg",
+        "One-click yt-dlp update",
+        "Save to the app folder by default, or browse to another folder",
+        "Playlist downloads, title/artist tags and optional thumbnail embedding",
+        "Advanced tab for extra yt-dlp arguments",
+        "Portable config.json next to the exe"
+      ],
+      "requirements": [
+        "Windows 10 or 11, 64-bit",
+        ".NET 8 Desktop Runtime (x64)",
+        "Internet connection (yt-dlp and Deno are downloaded on first run)"
+      ],
+      "run": "Unzip and run NeoGrab/NeoGrab.exe. Formerly YT-DLP-GUI.",
+      "download": "https://github.com/josfam76/neoapps/releases/download/neograb-1.0.1/NeoGrab-1.0.1.zip",
+      "filename": "NeoGrab-1.0.1.zip",
+      "sizeBytes": 287395,
+      "screenshot": "images/neograb.png",
+      "screenshotCaption": null,
+      "icon": "images/neograb-icon.png",
+      "placeholder": false,
+      "comingSoon": false,
+      "prerelease": false,
+      "changelog": [
+        {
+          "version": "1.0.1",
+          "date": "",
+          "changes": [
+            "Renamed from YT-DLP-GUI to NeoGrab",
+            "Layout fits without scrolling; Log and Advanced are tabs",
+            "Window size from 1.0.0 is reset once so it fits the new layout",
+            "Framework-dependent build (needs the .NET 8 Desktop Runtime), so the download is much smaller"
+          ]
+        },
+        {
+          "version": "1.0.0",
+          "date": "",
+          "changes": [
+            "First release (as YT-DLP-GUI)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "neocalc",
+      "name": "NeoCalc",
+      "version": "1.0.1",
+      "tagline": "A notepad calculator that answers as you type, plus a full Windows 11-style calculator.",
+      "description": "NeoCalc is a notepad calculator for Windows: type plain-language calculations one per line and the answers appear as you type. It handles percentages, variables, sums, units, time zones and live currency (for example `10 SEK in USD`, `15% off 400`, `5 km in miles`). A mode menu also opens Standard, Scientific, Programmer and Converter modes, like Windows 11 Calculator. It's portable, and your notes are autosaved.",
+      "features": [
+        "Plain-language calculations, one per line, with live answers",
+        "Percentages, variables, sums, units, time zones and live currency",
+        "Standard, Scientific, Programmer and Converter modes, like Windows 11 Calculator",
+        "Click a result to copy it",
+        "Number format follows your regional settings, or a format you choose",
+        "Portable, with autosaved notes"
+      ],
+      "requirements": [
+        "Windows 10 (20H1+) or Windows 11, 64-bit",
+        ".NET 8 Desktop Runtime (x64)"
+      ],
+      "run": "Unzip and run NeoCalc/bin/NeoCalc.exe.",
+      "download": "https://github.com/josfam76/neoapps/releases/download/neocalc-1.0.1/NeoCalc-1.0.1.zip",
+      "filename": "NeoCalc-1.0.1.zip",
+      "sizeBytes": 599425,
+      "screenshot": "images/neocalc.png",
+      "screenshotCaption": null,
+      "icon": null,
+      "placeholder": false,
+      "comingSoon": false,
+      "prerelease": false,
+      "changelog": [
+        {
+          "version": "1.0.1",
+          "date": "",
+          "changes": [
+            "Renamed from Numra to NeoCalc, with a one-time migration of the old settings folder",
+            "Smaller default text size (14), with a text-size slider and zoom shortcuts",
+            "Clear all button in the title bar (Ctrl+Shift+Delete)",
+            "Number format follows your regional settings, or a format you choose",
+            "More compact Settings window"
+          ]
+        },
+        {
+          "version": "1.0.0",
+          "date": "",
+          "changes": [
+            "First release (as Numra)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "neohealth",
+      "name": "NeoHealth",
+      "version": "1.0.0",
+      "tagline": "Check your PC's health and fix common Windows problems safely.",
+      "description": "NeoHealth is a Windows health and repair toolkit. Its read-only Check my PC scan looks at system files, crashes, disk health (including SMART for every HDD, SSD and NVMe), Windows Update, network and more, then gives a plain-language summary with a one-click fix for each problem. Built-in repairs like SFC, DISM, a Windows Update reset and a network reset run behind a safe GUI that asks for admin only when it's needed, makes a restore point first and logs every command. English and Swedish, with Ultra Modern and Windows themes.",
+      "features": [
+        "Read-only Check my PC scan of system files, crashes, disk health, Windows Update, network and more",
+        "Plain-language summary with a one-click fix for each problem",
+        "Built-in repairs including SFC, DISM, a Windows Update reset and a network reset",
+        "Asks for administrator rights only when a fix needs them",
+        "Creates a restore point first and logs every command",
+        "Disk health, including SMART, for every HDD, SSD and NVMe",
+        "English and Swedish",
+        "Ultra Modern and Windows themes"
+      ],
+      "requirements": [
+        "Windows 10 or 11, 64-bit",
+        ".NET 8 Desktop Runtime (x64)",
+        "Administrator rights for some repairs"
+      ],
+      "run": "Unzip and run NeoHealth/NeoHealth.exe.",
+      "download": "https://github.com/josfam76/neoapps/releases/download/neohealth-1.0.0/NeoHealth-1.0.0.zip",
+      "filename": "NeoHealth-1.0.0.zip",
+      "sizeBytes": 320728,
+      "screenshot": null,
+      "screenshotCaption": "Screenshot coming soon",
+      "icon": "images/neohealth-icon.png",
+      "placeholder": true,
+      "comingSoon": false,
+      "prerelease": false,
+      "changelog": [
+        {
+          "version": "1.0.0",
+          "date": "",
+          "changes": []
+        }
+      ]
+    },
+    {
+      "id": "meridian",
+      "name": "Meridian",
+      "version": "1.0.0",
+      "tagline": "Know first. Fix fast. Host monitoring for Windows.",
+      "description": "Meridian watches your servers and services from a single Windows app: ping, TCP ports, HTTP/HTTPS, DNS, CPU, disk space, Windows services, SQL Server Agent jobs and log files (local or on network shares), organised in folders with a green/red/grey status grid. Run checks as any saved Windows account, with passwords encrypted by Windows DPAPI. Get an SMTP email and a tray alert when something fails and again when it recovers, with uptime and response-time history.",
+      "features": [
+        "Ping, TCP ports, HTTP/HTTPS, DNS, CPU, disk space, Windows services, SQL Server Agent jobs, and log files (local or on network shares)",
+        "Organised in folders with a green/red/grey status grid",
+        "Run checks as any saved Windows account, with passwords encrypted by Windows DPAPI",
+        "SMTP email and a tray alert when something fails, and again when it recovers",
+        "Uptime and response-time history"
+      ],
+      "requirements": [
+        "Windows 10 or 11, 64-bit",
+        "No .NET install needed (self-contained)"
+      ],
+      "run": "Unzip and run Meridian.exe. This build is self-contained — no .NET install is needed.",
+      "download": "https://github.com/josfam76/neoapps/releases/download/meridian-1.0.0/Meridian-1.0.0-win-x64.zip",
+      "filename": "Meridian-1.0.0-win-x64.zip",
+      "sizeBytes": 73510107,
+      "screenshot": "images/meridian.png",
+      "screenshotCaption": "Preview mockup",
+      "icon": "images/meridian-icon.png",
+      "placeholder": false,
+      "comingSoon": false,
+      "prerelease": false,
+      "changelog": [
+        {
+          "version": "1.0.0",
+          "date": "",
+          "changes": [
+            "First release"
+          ]
+        }
+      ],
+      "mockup": true
+    }
+  ]
+}

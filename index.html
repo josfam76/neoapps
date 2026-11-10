@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Portable Windows desktop apps by Josef Familonidis.">
+  <title>NeoApps</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header id="site-header"></header>
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="wrap">
+        <p class="hero-kicker">Windows desktop apps</p>
+        <h1 class="hero-title">NeoApps</h1>
+        <p class="hero-sub" id="hero-sub">A small collection of portable Windows apps that share the Ultra Modern look.</p>
+      </div>
+    </section>
+
+    <section id="apps" class="section">
+      <div class="wrap">
+        <h2 class="section-title">Apps</h2>
+        <p class="section-lead">Download a zip, unzip it, and run the app. Most titles need the .NET 8 Desktop Runtime.</p>
+        <div id="app-grid" class="app-grid"></div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="wrap">
+        <h2 class="section-title">About</h2>
+        <p class="section-lead">NeoApps is a set of Windows apps by Josef Familonidis. The site is unlisted — share the link only with people you trust.</p>
+        <div class="faq">
+          <article class="faq-item">
+            <h3>How do I install an app?</h3>
+            <p>Download the zip, extract it to a folder you can write to (for example <code>C:\Apps</code>, not Program Files), and run the <code>.exe</code>. There is no installer. Most apps need the <a href="https://dotnet.microsoft.com/download/dotnet/8.0">.NET 8 Desktop Runtime (x64)</a>. If it is missing, Windows will offer a download link.</p>
+          </article>
+          <article class="faq-item">
+            <h3>Windows says “Windows protected your PC”</h3>
+            <p>These apps are not code-signed, so Windows SmartScreen may warn the first time you run one. That is expected.</p>
+            <p>Click <span class="kbd">More info</span>, then <span class="kbd">Run anyway</span>.</p>
+          </article>
+          <article class="faq-item">
+            <h3>Are the apps portable?</h3>
+            <p>Yes. They ship as portable zip files with no installer. Settings are saved next to the app or in your user folder.</p>
+          </article>
+          <article class="faq-item">
+            <h3>What is the .NET 8 Desktop Runtime?</h3>
+            <p>A free Microsoft component that these apps use to run. Install the x64 Desktop Runtime from <a href="https://dotnet.microsoft.com/download/dotnet/8.0">dotnet.microsoft.com</a> if Windows asks for it. The SDK is not required.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer id="site-footer"></footer>
+
+  <div id="lightbox" class="lightbox" hidden role="dialog" aria-modal="true" aria-label="Screenshot">
+    <button type="button" class="lightbox-close" aria-label="Close screenshot">×</button>
+    <img alt="">
+  </div>
+
+  <script src="js/site.js" defer></script>
+  <script src="js/home.js" defer></script>
+</body>
+</html>

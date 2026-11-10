@@ -1,0 +1,21 @@
+{
+  "name": "NeoApps",
+  "tagline": "Portable Windows desktop apps by Josef Familonidis.",
+  "author": "Josef Familonidis",
+  "copyright": "© 2026 Josef Familonidis",
+  "description": "A small collection of portable Windows apps that share the Ultra Modern look.",
+  "nav": [
+    {
+      "id": "apps",
+      "label": "Apps",
+      "href": "index.html#apps"
+    },
+    {
+      "id": "about",
+      "label": "About",
+      "href": "index.html#about"
+    }
+  ],
+  "githubOwner": "josfam76",
+  "githubRepo": "neoapps"
+}
