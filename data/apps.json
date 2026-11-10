@@ -28,7 +28,7 @@
       "download": "https://github.com/josfam76/neoapps/releases/download/pulse-monitor-1.0.10/PulseMonitor-1.0.10.zip",
       "filename": "PulseMonitor-1.0.10.zip",
       "sizeBytes": 2391571,
-      "screenshot": "images/pulse-monitor.png",
+      "screenshot": "images/pulse-monitor/1-dashboard.png",
       "screenshotCaption": null,
       "icon": null,
       "placeholder": false,
@@ -44,6 +44,11 @@
             "Settings → Reset to defaults clears the saved layout"
           ]
         }
+      ],
+      "screenshots": [
+        "images/pulse-monitor/1-dashboard.png",
+        "images/pulse-monitor/2-compact.png",
+        "images/pulse-monitor/3-settings.png"
       ]
     },
     {
@@ -73,8 +78,8 @@
       "download": "https://github.com/josfam76/neoapps/releases/download/neoplay-1.0.9/NeoPlay_1.0.9.zip",
       "filename": "NeoPlay_1.0.9.zip",
       "sizeBytes": 2976296,
-      "screenshot": "images/neoplay.png",
-      "screenshotCaption": "Preview mockup. The header shows 1.0.8.",
+      "screenshot": "images/neoplay/1-radio-ultramodern.png",
+      "screenshotCaption": null,
       "icon": null,
       "placeholder": false,
       "comingSoon": false,
@@ -162,7 +167,13 @@
           ]
         }
       ],
-      "mockup": true
+      "screenshots": [
+        "images/neoplay/1-radio-ultramodern.png",
+        "images/neoplay/2-half-size.png",
+        "images/neoplay/3-mod-pattern.png",
+        "images/neoplay/4-fasttracker-radial.png",
+        "images/neoplay/5-retro-ledpeaks.png"
+      ]
     },
     {
       "id": "nicebackup",
@@ -187,7 +198,7 @@
       "download": "https://github.com/josfam76/neoapps/releases/download/nicebackup-2.0.0/NiceBackup-2.0.0-win-x64.zip",
       "filename": "NiceBackup-2.0.0-win-x64.zip",
       "sizeBytes": 550169,
-      "screenshot": "images/nicebackup.png",
+      "screenshot": "images/nicebackup/1-main.png",
       "screenshotCaption": null,
       "icon": "images/nicebackup-icon.png",
       "placeholder": false,
@@ -201,6 +212,9 @@
             "2.0.0 rebuild: example paths in hints, samples and docs made generic. No functional changes."
           ]
         }
+      ],
+      "screenshots": [
+        "images/nicebackup/1-main.png"
       ]
     },
     {
@@ -228,7 +242,7 @@
       "download": "https://github.com/josfam76/neoapps/releases/download/neograb-1.0.1/NeoGrab-1.0.1.zip",
       "filename": "NeoGrab-1.0.1.zip",
       "sizeBytes": 287395,
-      "screenshot": "images/neograb.png",
+      "screenshot": "images/neograb/1-main.png",
       "screenshotCaption": null,
       "icon": "images/neograb-icon.png",
       "placeholder": false,
@@ -252,6 +266,9 @@
             "First release (as YT-DLP-GUI)"
           ]
         }
+      ],
+      "screenshots": [
+        "images/neograb/1-main.png"
       ]
     },
     {
@@ -276,7 +293,7 @@
       "download": "https://github.com/josfam76/neoapps/releases/download/neocalc-1.0.1/NeoCalc-1.0.1.zip",
       "filename": "NeoCalc-1.0.1.zip",
       "sizeBytes": 599425,
-      "screenshot": "images/neocalc.png",
+      "screenshot": "images/neocalc/1-notepad.png",
       "screenshotCaption": null,
       "icon": null,
       "placeholder": false,
@@ -301,6 +318,11 @@
             "First release (as Numra)"
           ]
         }
+      ],
+      "screenshots": [
+        "images/neocalc/1-notepad.png",
+        "images/neocalc/2-standard.png",
+        "images/neocalc/3-converter.png"
       ]
     },
     {
@@ -328,10 +350,10 @@
       "download": "https://github.com/josfam76/neoapps/releases/download/neohealth-1.0.0/NeoHealth-1.0.0.zip",
       "filename": "NeoHealth-1.0.0.zip",
       "sizeBytes": 320728,
-      "screenshot": null,
-      "screenshotCaption": "Screenshot coming soon",
+      "screenshot": "images/neohealth/1-check-my-pc.png",
+      "screenshotCaption": null,
       "icon": "images/neohealth-icon.png",
-      "placeholder": true,
+      "placeholder": false,
       "comingSoon": false,
       "prerelease": false,
       "changelog": [
@@ -340,6 +362,10 @@
           "date": "",
           "changes": []
         }
+      ],
+      "screenshots": [
+        "images/neohealth/1-check-my-pc.png",
+        "images/neohealth/2-system.png"
       ]
     },
     {
@@ -363,8 +389,8 @@
       "download": "https://github.com/josfam76/neoapps/releases/download/meridian-1.0.0/Meridian-1.0.0-win-x64.zip",
       "filename": "Meridian-1.0.0-win-x64.zip",
       "sizeBytes": 73510107,
-      "screenshot": "images/meridian.png",
-      "screenshotCaption": "Preview mockup",
+      "screenshot": "images/meridian/1-main.png",
+      "screenshotCaption": null,
       "icon": "images/meridian-icon.png",
       "placeholder": false,
       "comingSoon": false,
@@ -378,7 +404,104 @@
           ]
         }
       ],
-      "mockup": true
+      "screenshots": [
+        "images/meridian/1-main.png"
+      ]
+    },
+    {
+      "id": "heictojpeg",
+      "name": "HeicToJpeg",
+      "version": "1.0.0",
+      "tagline": "Convert iPhone HEIC photos to JPEG, keeping rotation, EXIF and dates.",
+      "description": "HeicToJpeg is a small Windows program that converts iPhone HEIC and HEIF photos to JPEG by drag-and-drop. Portrait photos stay portrait, EXIF data including GPS and dates is kept, Display P3 colour is converted to sRGB, and an existing JPEG is never overwritten. No Microsoft Store HEIF/HEVC extensions are needed; the decoder is built in.",
+      "features": [
+        "Drag and drop .heic / .heif files or whole folders onto the window",
+        "Saves a JPEG next to the original, never overwriting an existing file",
+        "Keeps rotation, date taken, GPS location and other photo info",
+        "Converts Display P3 colour (typical of iPhone photos) to standard sRGB",
+        "The original HEIC files are never changed",
+        "Click the drop area to pick files, or drag them onto the exe itself"
+      ],
+      "requirements": [
+        "Windows 10 or 11, 64-bit",
+        ".NET 8 Desktop Runtime (x64)"
+      ],
+      "run": "Unzip and run HeicToJpeg/HeicToJpeg.exe.",
+      "download": "https://github.com/josfam76/neoapps/releases/download/heictojpeg-1.0.0/HeicToJpeg-1.0.0.zip",
+      "filename": "HeicToJpeg-1.0.0.zip",
+      "sizeBytes": 11896853,
+      "screenshot": "images/heictojpeg/1-main.png",
+      "screenshots": [
+        "images/heictojpeg/1-main.png"
+      ],
+      "screenshotCaption": null,
+      "icon": null,
+      "placeholder": false,
+      "comingSoon": false,
+      "prerelease": false,
+      "changelog": [
+        {
+          "version": "1.0.0",
+          "date": "",
+          "changes": [
+            "First release",
+            "Drag-and-drop HEIC/HEIF files or folders to convert them to JPEG",
+            "Keeps rotation, EXIF (including GPS) and dates",
+            "Converts Display P3 colours to sRGB",
+            "Never overwrites an existing JPEG"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "midiplayer",
+      "name": "MidiPlayer",
+      "version": "1.0.0",
+      "tagline": "A MIDI player for Windows, with SoundFonts, a playlist and channel meters.",
+      "description": "MidiPlayer plays Standard MIDI Files (.mid, .midi, .kar and .rmi) on Windows, using the built-in General MIDI synthesizer or any SoundFont (.sf2) you choose. It has a playlist, a seek bar, repeat and volume, plus Channels and File info tabs, and can run in English or Swedish. A short Demo.mid is included so you can try it right away.",
+      "features": [
+        "Plays .mid, .midi, .kar and .rmi files",
+        "Windows General MIDI output, or any SoundFont (.sf2) via MeltySynth",
+        "Playlist with drag and drop, remembered between runs",
+        "Seek bar, repeat (off, song or playlist) and volume",
+        "Channels tab with instrument names, note counts and live activity meters",
+        "File info tab with title, tempo, time signature, tracks and more",
+        "English and Swedish"
+      ],
+      "requirements": [
+        "Windows 10 or 11, 64-bit",
+        ".NET 8 Desktop Runtime (x64)"
+      ],
+      "run": "Unzip and run MidiPlayer/MidiPlayer.exe.",
+      "download": "https://github.com/josfam76/neoapps/releases/download/midiplayer-1.0.0/MidiPlayer-1.0.0.zip",
+      "filename": "MidiPlayer-1.0.0.zip",
+      "sizeBytes": 427898,
+      "screenshot": "images/midiplayer/1-main.png",
+      "screenshots": [
+        "images/midiplayer/1-main.png",
+        "images/midiplayer/2-fileinfo.png",
+        "images/midiplayer/3-about.png",
+        "images/midiplayer/4-swedish.png"
+      ],
+      "screenshotCaption": null,
+      "icon": null,
+      "placeholder": false,
+      "comingSoon": false,
+      "prerelease": false,
+      "changelog": [
+        {
+          "version": "1.0.0",
+          "date": "",
+          "changes": [
+            "First release",
+            "Plays .mid, .midi, .kar and .rmi files",
+            "Windows General MIDI output or any SoundFont (.sf2)",
+            "Playlist, seek bar, repeat and volume",
+            "Channels and File info tabs",
+            "English and Swedish"
+          ]
+        }
+      ]
     }
   ]
 }

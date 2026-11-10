@@ -6,14 +6,35 @@
     return q.get(name);
   }
 
+  function shotList(app) {
+    if (app.screenshots && app.screenshots.length) return app.screenshots;
+    if (app.screenshot && !app.placeholder) return [app.screenshot];
+    return [];
+  }
+
   function shotHtml(app) {
     var N = window.NeoApps;
-    if (app.screenshot && !app.placeholder) {
+    var shots = shotList(app);
+    if (shots.length) {
       var capText = app.screenshotCaption || (app.mockup ? "Preview mockup" : "");
       var cap = capText ? '<p class="shot-caption">' + N.escapeHtml(capText) + "</p>" : "";
+      var thumbs = "";
+      if (shots.length > 1) {
+        thumbs = '<div class="shot-thumbs" role="list">' + shots.map(function (src, i) {
+          return (
+            '<button type="button" class="shot-thumb' + (i === 0 ? " is-active" : "") +
+              '" data-shot="' + N.escapeHtml(src) +
+              '" aria-label="' + N.escapeHtml(app.name) + " screenshot " + (i + 1) + '">' +
+              '<img src="' + N.escapeHtml(src) + '" alt=""></button>'
+          );
+        }).join("") + "</div>";
+      }
       return (
-        '<div class="app-hero-shot"><img src="' + N.escapeHtml(app.screenshot) +
-          '" alt="' + N.escapeHtml(app.name) + ' screenshot" data-lightbox></div>' + cap
+        '<div class="shot-gallery">' +
+          '<div class="app-hero-shot"><img id="shot-main" src="' + N.escapeHtml(shots[0]) +
+            '" alt="' + N.escapeHtml(app.name) + ' screenshot" data-lightbox></div>' +
+          thumbs + cap +
+        "</div>"
       );
     }
     var icon = app.icon
@@ -59,6 +80,24 @@
     }).join("");
   }
 
+
+  function bindGallery(root) {
+    var gallery = root.querySelector(".shot-gallery");
+    if (!gallery) return;
+    var main = gallery.querySelector("#shot-main");
+    if (!main) return;
+    gallery.querySelectorAll(".shot-thumb").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var src = btn.getAttribute("data-shot");
+        if (!src) return;
+        main.src = src;
+        gallery.querySelectorAll(".shot-thumb").forEach(function (b) {
+          b.classList.toggle("is-active", b === btn);
+        });
+      });
+    });
+  }
+
   function render(app, site) {
     var N = window.NeoApps;
     var root = document.getElementById("app-page");
@@ -101,6 +140,8 @@
         features + reqs +
         '<section class="app-block" id="changelog"><h2>Release notes</h2>' + changelogHtml(app) + "</section>" +
       "</div>";
+
+    bindGallery(root);
 
     document.title = app.name + " · " + (site.name || "NeoApps");
     document.body.setAttribute("data-title", document.title);
