@@ -101,10 +101,7 @@
   function render(app, site) {
     var N = window.NeoApps;
     var root = document.getElementById("app-page");
-    var badges = "";
-    if (app.version) badges += '<span class="badge badge-version">' + N.escapeHtml(app.version) + "</span>";
-    if (app.prerelease) badges += '<span class="badge badge-pre">Pre-release</span>';
-    if (app.comingSoon) badges += '<span class="badge badge-soon">Coming soon</span>';
+    var badges = N.badgesHtml(app);
 
     var href = N.downloadUrl(app, site);
     var actions = '<div class="card-actions">';

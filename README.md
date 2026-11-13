@@ -42,6 +42,10 @@ python tools/add_release.py pulse-monitor path/to/PulseMonitor-1.0.11.zip 1.0.11
 
 The script writes a cleaned zip to `release-assets/`, updates `version`, `filename`, `sizeBytes` and the GitHub Release `download` URL in `data/apps.json`, and prepends a changelog entry (newest first). Then upload that zip as a Release asset on the tag `<app-id>-<version>`.
 
+A small **NEW** badge appears automatically on the home-page card and the app page header when the latest changelog entry's `date` (or a top-level `date` field) is within the last 7 days on the visitor's clock. The window is the single `NEW_BADGE_DAYS` constant in `js/site.js`. Future releases only need `--date` set; do not add the badge by hand. Apps with no date do not get a badge.
+
+Home-page cards are also sorted by that same date, newest first, when the page is rendered. Apps with the same date (or no date) keep their order in `data/apps.json`, so a new release moves to the top automatically.
+
 3. If you have a new screenshot, replace the file in `images/` yourself (or change the `screenshot` field in `apps.json`). `add_release.py` never touches `images/`. Edited screenshots already in `images/` stay as they are until you replace them on purpose.
 
 ### README overrides

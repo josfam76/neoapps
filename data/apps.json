@@ -1,4 +1,5 @@
 {
+  "_comment": "A NEW badge is shown automatically for 7 days after an app's latest changelog date (or a top-level date field). The window is NEW_BADGE_DAYS in js/site.js. Future releases only need that date set; do not add the badge by hand. Apps with no date get no badge.",
   "apps": [
     {
       "id": "pulse-monitor",
@@ -77,7 +78,7 @@
       "run": "Unzip and run NeoPlay/NeoPlay.exe. There is no installer.",
       "download": "https://github.com/josfam76/neoapps/releases/download/neoplay-1.1.0/NeoPlay_1.1.0.zip",
       "filename": "NeoPlay_1.1.0.zip",
-      "sizeBytes": 2984124,
+      "sizeBytes": 2984853,
       "screenshot": "images/neoplay/1-radio-ultramodern.png",
       "screenshotCaption": null,
       "icon": null,
@@ -98,7 +99,8 @@
             "Fixed: settings and buttons in the CFG pop-up didn't respond to clicks.",
             "Fixed: mouse wheel scrolling in the CFG pop-up went the wrong way.",
             "Fixed: the mouse wheel in the CFG pop-up changed sliders and choices when the pointer passed over them; it now always scrolls the menu.",
-            "Changed: in Half size, the size button now reads FULL SIZE and sits in the bottom right corner, like HALF SIZE in Full size, and the volume bar is wider."
+            "Changed: in Half size, the size button now reads FULL SIZE and sits in the bottom right corner, like HALF SIZE in Full size, and the volume bar is wider.",
+            "New: NeoPlay remembers where its window was and opens there next time. If that spot is no longer on screen, for example after a monitor was unplugged, it opens centered instead."
           ]
         },
         {
@@ -458,7 +460,7 @@
       "changelog": [
         {
           "version": "1.0.0",
-          "date": "",
+          "date": "2026-11-10",
           "changes": [
             "First release",
             "Drag-and-drop HEIC/HEIF files or folders to convert them to JPEG",
@@ -507,7 +509,7 @@
       "changelog": [
         {
           "version": "1.0.0",
-          "date": "",
+          "date": "2026-11-10",
           "changes": [
             "First release",
             "Plays .mid, .midi, .kar and .rmi files",

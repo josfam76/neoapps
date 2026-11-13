@@ -40,10 +40,7 @@
 
   function cardHtml(app, site) {
     var N = window.NeoApps;
-    var badges = "";
-    if (app.version) badges += '<span class="badge badge-version">' + N.escapeHtml(app.version) + "</span>";
-    if (app.prerelease) badges += '<span class="badge badge-pre">Pre-release</span>';
-    if (app.comingSoon) badges += '<span class="badge badge-soon">Coming soon</span>';
+    var badges = N.badgesHtml(app);
 
     var tagline = app.tagline
       ? '<p class="tagline">' + N.escapeHtml(app.tagline) + "</p>"
@@ -78,7 +75,7 @@
     var grid = document.getElementById("app-grid");
     if (!grid) return;
     Promise.all([N.loadSite(), N.loadApps()]).then(function (results) {
-      var site = results[0], apps = results[1];
+      var site = results[0], apps = N.sortAppsByReleaseDate(results[1]);
       grid.innerHTML = apps.map(function (app) { return cardHtml(app, site); }).join("");
     }).catch(function (err) {
       grid.innerHTML = '<p class="empty-note">Could not load the app list.</p>';

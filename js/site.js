@@ -2,6 +2,9 @@
 (function () {
   "use strict";
 
+  // Days after a release that the "NEW" badge stays visible. Change this one number.
+  var NEW_BADGE_DAYS = 7;
+
   var SITE_CACHE = null;
   var APPS_CACHE = null;
 
@@ -89,6 +92,70 @@
   function latestChangelog(app) {
     var log = (app && app.changelog) || [];
     return log.length ? log[0] : null;
+  }
+
+  function parseISODate(iso) {
+    var parts = String(iso || "").split("-");
+    if (parts.length < 3) return null;
+    var y = parseInt(parts[0], 10), m = parseInt(parts[1], 10), d = parseInt(parts[2], 10);
+    if (!y || !m || !d) return null;
+    var date = new Date(y, m - 1, d);
+    if (date.getFullYear() !== y || date.getMonth() !== m - 1 || date.getDate() !== d) return null;
+    return date;
+  }
+
+  function releaseDate(app) {
+    var latest = latestChangelog(app);
+    var iso = ((latest && latest.date) || (app && app.date) || "").toString().trim();
+    return iso;
+  }
+
+  function nowDate() {
+    if (typeof window !== "undefined" && window.__NEOAPPS_TODAY) {
+      var forced = parseISODate(window.__NEOAPPS_TODAY);
+      if (forced) return forced;
+    }
+    return new Date();
+  }
+
+  // True when the latest changelog/release date is within NEW_BADGE_DAYS of today.
+  // Apps with no date never get a badge. Future dates are ignored.
+  function isNewRelease(app, now) {
+    var released = parseISODate(releaseDate(app));
+    if (!released) return false;
+    now = now || nowDate();
+    var today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    var days = Math.round((today - released) / 86400000);
+    return days >= 0 && days <= NEW_BADGE_DAYS;
+  }
+
+  function badgesHtml(app) {
+    var html = "";
+    if (isNewRelease(app)) {
+      html += '<span class="badge badge-new" title="Released within the last ' +
+        NEW_BADGE_DAYS + ' days">NEW</span>';
+    }
+    if (app.version) html += '<span class="badge badge-version">' + escapeHtml(app.version) + "</span>";
+    if (app.prerelease) html += '<span class="badge badge-pre">Pre-release</span>';
+    if (app.comingSoon) html += '<span class="badge badge-soon">Coming soon</span>';
+    return html;
+  }
+
+  // Home-page cards are sorted newest-first by release date at render time.
+  // Apps with no date go last. Ties keep the order in apps.json.
+  function sortAppsByReleaseDate(apps) {
+    return (apps || []).map(function (app, index) {
+      return { app: app, index: index };
+    }).sort(function (a, b) {
+      var da = parseISODate(releaseDate(a.app));
+      var db = parseISODate(releaseDate(b.app));
+      var ta = da ? da.getTime() : 0;
+      var tb = db ? db.getTime() : 0;
+      if (ta !== tb) return tb - ta;
+      return a.index - b.index;
+    }).map(function (item) {
+      return item.app;
+    });
   }
 
   function shortReqs(app) {
@@ -268,6 +335,10 @@
     escapeHtml: escapeHtml,
     inlineCode: inlineCode,
     latestChangelog: latestChangelog,
+    isNewRelease: isNewRelease,
+    badgesHtml: badgesHtml,
+    sortAppsByReleaseDate: sortAppsByReleaseDate,
+    NEW_BADGE_DAYS: NEW_BADGE_DAYS,
     shortReqs: shortReqs,
     bootChrome: bootChrome,
     initLightbox: initLightbox
