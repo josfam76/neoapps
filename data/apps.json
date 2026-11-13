@@ -78,7 +78,7 @@
       "run": "Unzip and run NeoPlay/NeoPlay.exe. There is no installer.",
       "download": "https://github.com/josfam76/neoapps/releases/download/neoplay-1.1.0/NeoPlay_1.1.0.zip",
       "filename": "NeoPlay_1.1.0.zip",
-      "sizeBytes": 2984853,
+      "sizeBytes": 2985941,
       "screenshot": "images/neoplay/1-radio-ultramodern.png",
       "screenshotCaption": null,
       "icon": null,
@@ -100,7 +100,8 @@
             "Fixed: mouse wheel scrolling in the CFG pop-up went the wrong way.",
             "Fixed: the mouse wheel in the CFG pop-up changed sliders and choices when the pointer passed over them; it now always scrolls the menu.",
             "Changed: in Half size, the size button now reads FULL SIZE and sits in the bottom right corner, like HALF SIZE in Full size, and the volume bar is wider.",
-            "New: NeoPlay remembers where its window was and opens there next time. If that spot is no longer on screen, for example after a monitor was unplugged, it opens centered instead."
+            "New: NeoPlay remembers where its window was and opens there next time. If that spot is no longer on screen, for example after a monitor was unplugged, it opens centered instead.",
+            "Fixed: on a second monitor with a different resolution, NeoPlay could reopen too big. It now sizes itself for the monitor it opens on, and resizes again if you move it to another monitor."
           ]
         },
         {
