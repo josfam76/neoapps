@@ -77,7 +77,7 @@
       "run": "Unzip and run NeoPlay/NeoPlay.exe. There is no installer.",
       "download": "https://github.com/josfam76/neoapps/releases/download/neoplay-1.1.0/NeoPlay_1.1.0.zip",
       "filename": "NeoPlay_1.1.0.zip",
-      "sizeBytes": 2983903,
+      "sizeBytes": 2984124,
       "screenshot": "images/neoplay/1-radio-ultramodern.png",
       "screenshotCaption": null,
       "icon": null,
@@ -97,7 +97,8 @@
             "In Full size, the last row of the button grid is now RADIO and CFG.",
             "Fixed: settings and buttons in the CFG pop-up didn't respond to clicks.",
             "Fixed: mouse wheel scrolling in the CFG pop-up went the wrong way.",
-            "Fixed: the mouse wheel in the CFG pop-up changed sliders and choices when the pointer passed over them; it now always scrolls the menu."
+            "Fixed: the mouse wheel in the CFG pop-up changed sliders and choices when the pointer passed over them; it now always scrolls the menu.",
+            "Changed: in Half size, the size button now reads FULL SIZE and sits in the bottom right corner, like HALF SIZE in Full size, and the volume bar is wider."
           ]
         },
         {
