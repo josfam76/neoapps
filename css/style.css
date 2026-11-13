@@ -831,6 +831,21 @@ a:hover {
   font-size: 0.9rem;
 }
 
+.alt-downloads {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+.alt-downloads a {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.alt-downloads a:hover {
+  color: var(--text);
+}
+
 .app-blocks {
   display: grid;
   gap: 28px;

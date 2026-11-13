@@ -521,6 +521,101 @@
           ]
         }
       ]
+    },
+    {
+      "id": "neodisk",
+      "name": "NeoDisk",
+      "version": "1.1.2",
+      "tagline": "A WinDirStat-style disk usage analyzer for Windows, with Insights and disk health.",
+      "description": "NeoDisk is a portable C# .NET 8 WPF disk usage analyzer in the spirit of WinDirStat. It shows where your space went in a folder tree, a file type list scoped to the selected folder, and an Insights panel: biggest files, duplicates, cleanup candidates, old and forgotten files, and an optional cushion-shaded treemap. The location drop-down lists local drives, mapped network drives and NAS shares. A fast NTFS MFT scan runs when you start it as administrator. There is a SMART disk health tab, drag-and-drop, and an Ultra Modern theme by default, with Classic as an option.",
+      "features": [
+        "Folder tree sorted by size, plus a file type list scoped to the selected folder",
+        "Insights: biggest files, duplicates, cleanup candidates, and old & forgotten files",
+        "Optional cushion-shaded treemap of the selected folder",
+        "Drive and NAS drop-down, including mapped network drives (also when running as administrator)",
+        "Fast NTFS MFT scan when run as administrator",
+        "SMART disk health tab for local physical disks",
+        "Drag a folder or drive onto the window to scan it",
+        "Ultra Modern theme by default, or Classic (follows Windows light/dark mode)",
+        "Portable: unzip and run, nothing is written to the registry"
+      ],
+      "requirements": [
+        "Windows 10 or 11, 64-bit",
+        "Self-contained zip: nothing else to install",
+        "Framework-dependent zip: .NET 8 Desktop Runtime (x64)"
+      ],
+      "run": "Unzip and run NeoDisk/NeoDisk.exe. There is no installer.",
+      "download": "https://github.com/josfam76/neoapps/releases/download/neodisk-1.1.2/NeoDisk-v1.1.2-win-x64.zip",
+      "filename": "NeoDisk-v1.1.2-win-x64.zip",
+      "sizeBytes": 51758656,
+      "screenshot": "images/neodisk/1-usage-ultramodern.png",
+      "screenshotCaption": null,
+      "icon": null,
+      "placeholder": false,
+      "comingSoon": false,
+      "prerelease": false,
+      "changelog": [
+        {
+          "version": "1.1.2",
+          "date": "2026-11-13",
+          "changes": [
+            "Removed all preset NAS server names: the NAS server list is empty by default and the 1.1 config migration no longer adds a server; servers already in `config.json` are kept.",
+            "Help texts, tooltips, README, tests, demo data and screenshots use generic placeholders (`\\\\NAS\\share`, `net view \\\\NAS`, `\\\\MediaServer`).",
+            "Copyright and assembly metadata now read \"NeoApps\".",
+            "`CHANGELOG.md` added."
+          ]
+        },
+        {
+          "version": "1.1.1",
+          "date": "2026-11-13",
+          "changes": [
+            "Full ControlTemplates for ContextMenu, MenuItem (TopLevelHeader, TopLevelItem, SubmenuHeader, SubmenuItem) and Separator in Ultra Modern and Classic: no more light icon gutter, separator line or light icon box from the default Aero2 template.",
+            "Themed menus everywhere (implicit styles), with rounded corners, a shadow, consistent hover, muted input-gesture text, accent check marks and submenu arrows; covers the TextBox Cut/Copy/Paste menu too.",
+            "Self-test checks the menu templates in both themes; new `--context-menu` screenshot mode and context-menu screenshots."
+          ]
+        },
+        {
+          "version": "1.1.0",
+          "date": "2026-11-13",
+          "changes": [
+            "File types follow the selected folder (tree, treemap or Insights), with the folder in the header; computed in the background for big folders and cached.",
+            "New Insights panel replaces the treemap: Biggest files, Duplicates (size → partial hash → full SHA-256, background with progress/cancel, Recycle Bin), Cleanup candidates with safety notes, Old & forgotten, and the treemap as an optional tab.",
+            "Mapped network drives are listed when NeoDisk runs as administrator (registry, WNetEnumResource and `net use`), shown Explorer-style with a network icon and scanned via the UNC path when the letter isn't available.",
+            "Last-access times in the scanner, MFT reader and scan cache (cache format 2; 1.0 caches still load).",
+            "New Insights settings (duplicate minimum size and threads, \"old\" age and size, use last access).",
+            "Smaller self-contained build (unused runtime files left out: 66.1 → 57.2 MB) plus a framework-dependent build; the zips include the screenshots folder."
+          ]
+        },
+        {
+          "version": "1.0.0",
+          "date": "2026-11-13",
+          "changes": [
+            "First release: portable WPF disk usage analyzer for Windows with a folder tree, file type list and cushion-shaded squarified treemap, linked selection.",
+            "Fast NTFS MFT scan as administrator, parallel standard and network scans, drag and drop, saved locations and NAS share discovery.",
+            "Instant reopen from a cached last scan; delete to the Recycle Bin, open in Explorer, copy path.",
+            "Disk health page with SMART/NVMe data (code from NeoHealth).",
+            "Ultra Modern and Classic (Windows 11, light/dark, accent colour) themes; settings in a portable `config.json`."
+          ]
+        }
+      ],
+      "screenshots": [
+        "images/neodisk/1-usage-ultramodern.png",
+        "images/neodisk/2-locations.png",
+        "images/neodisk/3-folder-scope-old.png",
+        "images/neodisk/4-duplicates.png",
+        "images/neodisk/5-cleanup.png",
+        "images/neodisk/6-context-menu.png",
+        "images/neodisk/7-treemap-classic.png",
+        "images/neodisk/8-health.png"
+      ],
+      "altDownloads": [
+        {
+          "filename": "NeoDisk-v1.1.2-win-x64-fd.zip",
+          "label": "Framework-dependent (needs .NET 8 Desktop Runtime)",
+          "sizeBytes": 379163,
+          "download": "https://github.com/josfam76/neoapps/releases/download/neodisk-1.1.2/NeoDisk-v1.1.2-win-x64-fd.zip"
+        }
+      ]
     }
   ]
 }

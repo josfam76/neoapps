@@ -107,6 +107,17 @@
     var actions = '<div class="card-actions">';
     if (href) actions += '<a class="btn btn-primary" href="' + N.escapeHtml(href) + '">Download</a>';
     actions += "</div>";
+    var alts = app.altDownloads || [];
+    if (alts.length) {
+      actions += '<p class="alt-downloads">' + alts.map(function (item) {
+        var u = N.downloadUrl(app, site, item);
+        if (!u) return "";
+        var label = item.label || item.filename || "Alternative download";
+        var sz = N.formatSize(item.sizeBytes);
+        return 'Also available: <a href="' + N.escapeHtml(u) + '">' + N.escapeHtml(label) + "</a>" +
+          (sz ? " — " + N.escapeHtml(sz) : "");
+      }).filter(Boolean).join("<br>") + "</p>";
+    }
     var run = app.run ? '<p class="run-hint">' + N.escapeHtml(app.run) + "</p>" : "";
     var size = N.formatSize(app.sizeBytes);
 

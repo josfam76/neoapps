@@ -43,16 +43,29 @@
     return h === "localhost" || h === "127.0.0.1" || h === "[::1]" || h === "::1";
   }
 
-  function downloadUrl(app, site) {
-    if (!app || app.comingSoon || (!app.download && !app.filename)) return null;
-    if (isLocalPreview() && app.filename) {
-      return "release-assets/" + app.filename;
+  function downloadUrl(app, site, item) {
+    if (!app || app.comingSoon) return null;
+    var filename = app.filename;
+    var direct = app.download;
+    if (item) {
+      if (typeof item === "string") {
+        filename = item;
+        direct = null;
+      } else {
+        filename = item.filename || filename;
+        direct = item.download || null;
+      }
+    }
+    if (!direct && !filename) return null;
+    if (isLocalPreview() && filename) {
+      return "release-assets/" + filename;
     }
     var owner = (site && site.githubOwner) || "OWNER";
-    if (app.download) return String(app.download).split("OWNER").join(owner);
+    if (direct) return String(direct).split("OWNER").join(owner);
     var repo = (site && site.githubRepo) || "neoapps";
+    var version = (item && item.version) || app.version;
     return "https://github.com/" + owner + "/" + repo + "/releases/download/" +
-      app.id + "-" + app.version + "/" + app.filename;
+      app.id + "-" + version + "/" + filename;
   }
 
   function formatSize(bytes) {
@@ -161,10 +174,13 @@
   function shortReqs(app) {
     var bits = ["Windows x64"];
     var reqs = app.requirements || [];
+    var hasNet8 = false, hasNoNet = false;
     for (var i = 0; i < reqs.length; i++) {
-      if (/\.NET 8/i.test(reqs[i])) bits.push(".NET 8");
-      if (/no \.NET|self-contained/i.test(reqs[i])) bits.push("No .NET install");
+      if (/\.NET 8/i.test(reqs[i])) hasNet8 = true;
+      if (/no \.NET|self-contained/i.test(reqs[i])) hasNoNet = true;
     }
+    if (hasNoNet) bits.push("No .NET install");
+    else if (hasNet8) bits.push(".NET 8");
     var size = formatSize(app.sizeBytes);
     if (size) bits.push(size);
     if (app.prerelease) bits.push("Pre-release");
