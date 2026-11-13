@@ -54,7 +54,7 @@
     {
       "id": "neoplay",
       "name": "NeoPlay",
-      "version": "1.0.9",
+      "version": "1.1.0",
       "tagline": "A retro tracker module and audio player for Windows, with modern themes and internet radio.",
       "description": "NeoPlay plays classic tracker modules (MOD, XM, S3M, IT and more) and everyday audio files in a FastTracker 2-inspired interface with a scrolling pattern view, VU meters and retro visualizers. It has built-in internet radio with Amiga, C64 and demoscene stations first, plus normal genres. It's portable and switches between the FastTracker, Ultra Modern and Retro themes.",
       "features": [
@@ -75,9 +75,9 @@
         "Microsoft Visual C++ 2015–2022 Redistributable (x64), needed for tracker modules"
       ],
       "run": "Unzip and run NeoPlay/NeoPlay.exe. There is no installer.",
-      "download": "https://github.com/josfam76/neoapps/releases/download/neoplay-1.0.9/NeoPlay_1.0.9.zip",
-      "filename": "NeoPlay_1.0.9.zip",
-      "sizeBytes": 2976296,
+      "download": "https://github.com/josfam76/neoapps/releases/download/neoplay-1.1.0/NeoPlay_1.1.0.zip",
+      "filename": "NeoPlay_1.1.0.zip",
+      "sizeBytes": 2978927,
       "screenshot": "images/neoplay/1-radio-ultramodern.png",
       "screenshotCaption": null,
       "icon": null,
@@ -85,6 +85,18 @@
       "comingSoon": false,
       "prerelease": false,
       "changelog": [
+        {
+          "version": "1.1.0",
+          "date": "2026-11-13",
+          "changes": [
+            "CFG is now its own button in both Full and Half size and opens the settings as a solid pop-up. The pop-up scrolls when needed and closes with Esc.",
+            "Settings are grouped into GENERAL and MODULES. The MODULES group holds the module-only options: interpolation, stereo separation, Amiga resampler, compact pattern and module view.",
+            "ABOUT moved to a small button in the title strip. F1 still opens it.",
+            "In Half size, PLAY and PAUSE are one toggle button.",
+            "The CFG tab was removed from the side panel, which now has LIST, INS, SMP and MSG. An old saved CFG tab falls back to LIST.",
+            "In Full size, the last row of the button grid is now RADIO and CFG."
+          ]
+        },
         {
           "version": "1.0.9",
           "date": "2026-11-04",
