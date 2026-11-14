@@ -347,7 +347,7 @@
     {
       "id": "neohealth",
       "name": "NeoHealth",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "tagline": "Check your PC's health and fix common Windows problems safely.",
       "description": "NeoHealth is a Windows health and repair toolkit. Its read-only Check my PC scan looks at system files, crashes, disk health (including SMART for every HDD, SSD and NVMe), Windows Update, network and more, then gives a plain-language summary with a one-click fix for each problem. Built-in repairs like SFC, DISM, a Windows Update reset and a network reset run behind a safe GUI that asks for admin only when it's needed, makes a restore point first and logs every command. English and Swedish, with Ultra Modern and Windows themes.",
       "features": [
@@ -366,9 +366,9 @@
         "Administrator rights for some repairs"
       ],
       "run": "Unzip and run NeoHealth/NeoHealth.exe.",
-      "download": "https://github.com/josfam76/neoapps/releases/download/neohealth-1.0.0/NeoHealth-1.0.0.zip",
-      "filename": "NeoHealth-1.0.0.zip",
-      "sizeBytes": 320728,
+      "download": "https://github.com/josfam76/neoapps/releases/download/neohealth-1.0.1/NeoHealth-1.0.1.zip",
+      "filename": "NeoHealth-1.0.1.zip",
+      "sizeBytes": 339231,
       "screenshot": "images/neohealth/1-check-my-pc.png",
       "screenshotCaption": null,
       "icon": "images/neohealth-icon.png",
@@ -376,6 +376,21 @@
       "comingSoon": false,
       "prerelease": false,
       "changelog": [
+        {
+          "version": "1.0.1",
+          "date": "2026-11-14",
+          "changes": [
+            "Check my PC now shows exactly which programs crashed: name and file (e.g. \"Microsoft Edge (msedge.exe)\"), full path when known, how many times, and when it last crashed.",
+            "Each program gets a likely cause in plain words (graphics driver, Visual C++ runtime, .NET error, add-on or plugin, missing DLL, or a bug in the program) with what may help. The faulting module and error code are shown too.",
+            "The crash card stays compact with \"Show details\". The top 5 programs are listed, and \"Show all N programs\" opens the rest.",
+            "The exported report lists every crashed program with path, cause, module and error code.",
+            "Programs that stop responding (hangs) and .NET crashes are now included. A .NET crash counts once instead of twice.",
+            "Advice depends on the pattern: update or reinstall a program that keeps crashing, or run the System File Checker when many do.",
+            "Fixed: log messages from other software (e.g. Dell DDPM) were counted as crashes and shown as program names.",
+            "Fixed: the Recent crashes page could show such log messages as program names.",
+            "Fixed wording: proper singular and plural in English and Swedish."
+          ]
+        },
         {
           "version": "1.0.0",
           "date": "",
