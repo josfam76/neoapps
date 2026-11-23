@@ -347,9 +347,9 @@
     {
       "id": "neohealth",
       "name": "NeoHealth",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "tagline": "Check your PC's health and fix common Windows problems safely.",
-      "description": "NeoHealth is a Windows health and repair toolkit. Its read-only Check my PC scan looks at system files, crashes, disk health (including SMART for every HDD, SSD and NVMe), Windows Update, network and more, then gives a plain-language summary with a one-click fix for each problem. Built-in repairs like SFC, DISM, a Windows Update reset and a network reset run behind a safe GUI that asks for admin only when it's needed, makes a restore point first and logs every command. English and Swedish, with Ultra Modern and Windows themes.",
+      "description": "NeoHealth is a Windows health and repair toolkit. Its read-only Check my PC scan looks at system files, crashes, disk health (including SMART for every HDD, SSD and NVMe), Windows Update, network and more, then gives a plain-language summary with a one-click fix for each problem. Built-in repairs like SFC, DISM, a Windows Update reset and a network reset run behind a safe GUI that asks for admin only when it's needed, makes a restore point first and logs every command. A read-only Installed Apps list shows every desktop program and Microsoft Store app, including where it is installed, without uninstalling or changing anything. English and Swedish, with Ultra Modern and Windows themes.",
       "features": [
         "Read-only Check my PC scan of system files, crashes, disk health, Windows Update, network and more",
         "Plain-language summary with a one-click fix for each problem",
@@ -357,6 +357,7 @@
         "Asks for administrator rights only when a fix needs them",
         "Creates a restore point first and logs every command",
         "Disk health, including SMART, for every HDD, SSD and NVMe",
+        "Read-only Installed Apps list of desktop programs and Microsoft Store apps, with install locations",
         "English and Swedish",
         "Ultra Modern and Windows themes"
       ],
@@ -366,9 +367,9 @@
         "Administrator rights for some repairs"
       ],
       "run": "Unzip and run NeoHealth/NeoHealth.exe.",
-      "download": "https://github.com/josfam76/neoapps/releases/download/neohealth-1.0.1/NeoHealth-1.0.1.zip",
-      "filename": "NeoHealth-1.0.1.zip",
-      "sizeBytes": 339231,
+      "download": "https://github.com/josfam76/neoapps/releases/download/neohealth-1.0.2/NeoHealth-1.0.2.zip",
+      "filename": "NeoHealth-1.0.2.zip",
+      "sizeBytes": 379522,
       "screenshot": "images/neohealth/1-check-my-pc.png",
       "screenshotCaption": null,
       "icon": "images/neohealth-icon.png",
@@ -376,6 +377,21 @@
       "comingSoon": false,
       "prerelease": false,
       "changelog": [
+        {
+          "version": "1.0.2",
+          "date": "2026-11-23",
+          "changes": [
+            "New \"Installed Apps\" category: a read-only list of all desktop programs and Microsoft Store apps, like Windows 11's Installed apps. Nothing is uninstalled or changed, and no admin rights are needed.",
+            "Search, filter by type (desktop / Store) and drive, and sort by name, publisher, install date or size, with an \"N apps found\" count.",
+            "Shows exactly where each app is installed. Programs installed more than once appear once with every location listed, each with an Open folder button.",
+            "\"What it does\": description, product and company from the program file, installer comments, and the publisher's website and help links.",
+            "Shows whether an app starts with Windows, which services run from its folder, and how often it crashed (if Check my PC has run this session).",
+            "Shows the uninstaller path for reference only; NeoHealth never runs it.",
+            "Calculate size, Copy details, and Export list as CSV.",
+            "Windows' own system apps are hidden unless \"Show system apps\" is chosen.",
+            "App names and the Desktop/Store badge are clearly readable in every theme."
+          ]
+        },
         {
           "version": "1.0.1",
           "date": "2026-11-14",
