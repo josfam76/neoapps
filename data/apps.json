@@ -647,6 +647,69 @@
           "download": "https://github.com/josfam76/neoapps/releases/download/neodisk-1.1.2/NeoDisk-v1.1.2-win-x64-fd.zip"
         }
       ]
+    },
+    {
+      "id": "neocommander",
+      "name": "NeoCommander",
+      "version": "1.0.0",
+      "tagline": "A portable two-panel file manager for Windows, inspired by Norton Commander and Windows Explorer.",
+      "description": "NeoCommander is a portable two-panel file manager for Windows, inspired by Norton Commander (NC) and Windows Explorer. It pairs a fast keyboard-driven workflow (tabs, F-keys, queued copy and move, multi-rename, folder sync) with Explorer's shell context menu, thumbnails, Recycle Bin and drag and drop, plus extras like Quick Commands, a terminal panel, drive-wide search, disk usage and FTP/SFTP. No installer: unzip and run, in English, Swedish or Greek.",
+      "features": [
+        "Two panels with tabs, an F-key bar and a clickable breadcrumb",
+        "Queued copy, move and delete with pause, resume, cancel, conflict handling and Recycle Bin",
+        "The real Windows shell context menu, plus drag and drop with Explorer and other apps",
+        "Navigation pane with Quick access, This PC, network and NAS bookmarks, FTP/SFTP and workspaces, and an Explorer-style folder tree",
+        "Thumbnails, a preview pane and a quick viewer for text, hex and images",
+        "Browse zip, 7z, rar and tar archives like folders; pack to ZIP and extract",
+        "Fast search across drives (NTFS MFT when run as administrator), duplicate finder and disk-usage view",
+        "Multi-rename, folder compare and sync, MD5/SHA checksums and batch HEIC → JPG",
+        "Quick Commands (Ctrl+Shift+P), saved workspaces and a built-in terminal panel",
+        "Ultra Modern and Classic themes; English, Swedish and Greek",
+        "Portable: all settings live in config.json next to the exe"
+      ],
+      "requirements": [
+        "Windows 10 or 11, 64-bit",
+        "Self-contained zip: nothing else to install",
+        "Framework-dependent zip: .NET 8 Desktop Runtime (x64)"
+      ],
+      "download": "https://github.com/josfam76/neoapps/releases/download/neocommander-1.0.0/NeoCommander-1.0.0-win-x64.zip",
+      "filename": "NeoCommander-1.0.0-win-x64.zip",
+      "sizeBytes": 69039398,
+      "screenshot": "images/neocommander/1-ultramodern.png",
+      "icon": "images/neocommander-icon.png",
+      "comingSoon": false,
+      "prerelease": false,
+      "run": "Unzip and run NeoCommander/NeoCommander.exe. There is no installer.",
+      "changelog": [
+        {
+          "version": "1.0.0",
+          "date": "2026-11-25",
+          "changes": [
+            "First release, in two downloads: a self-contained exe (nothing to install) and a small exe that needs the .NET 8 Desktop Runtime.",
+            "Two panels with tabs, an F-key bar (F3 view, F4 edit, F5 copy, F6 move, F7 new folder, F8 delete) and a clickable breadcrumb.",
+            "Queued copy/move/delete manager with pause, resume and cancel, conflict handling and Recycle Bin.",
+            "The real Windows shell context menu (7-Zip, Git and more) and drag and drop with Explorer and other apps.",
+            "Navigation pane with Quick access, This PC, network and NAS bookmarks, FTP/SFTP and workspaces, plus an Explorer-style folder tree that follows the active panel.",
+            "Thumbnails, a preview pane and a quick viewer for text, hex and images.",
+            "Browse zip, 7z, rar and tar archives like folders; pack to ZIP and extract.",
+            "Fast search across drives (NTFS MFT when run as administrator), duplicate finder and disk-usage view.",
+            "Multi-rename, folder compare and sync, MD5/SHA checksums and batch HEIC → JPG.",
+            "Quick Commands (Ctrl+Shift+P), saved workspaces and a built-in terminal panel.",
+            "Ultra Modern and Classic themes; English, Swedish and Greek.",
+            "Portable: all settings live in config.json next to the exe."
+          ]
+        }
+      ],
+      "screenshotCaption": null,
+      "placeholder": false,
+      "altDownloads": [
+        {
+          "filename": "NeoCommander-1.0.0-win-x64-small.zip",
+          "label": "Framework-dependent (needs .NET 8 Desktop Runtime)",
+          "sizeBytes": 17795718,
+          "download": "https://github.com/josfam76/neoapps/releases/download/neocommander-1.0.0/NeoCommander-1.0.0-win-x64-small.zip"
+        }
+      ]
     }
   ]
 }
