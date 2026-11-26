@@ -651,7 +651,7 @@
     {
       "id": "neocommander",
       "name": "NeoCommander",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "tagline": "A portable two-panel file manager for Windows, inspired by Norton Commander and Windows Explorer.",
       "description": "NeoCommander is a portable two-panel file manager for Windows, inspired by Norton Commander (NC) and Windows Explorer. It pairs a fast keyboard-driven workflow (tabs, F-keys, queued copy and move, multi-rename, folder sync) with Explorer's shell context menu, thumbnails, Recycle Bin and drag and drop, plus extras like Quick Commands, a terminal panel, drive-wide search, disk usage and FTP/SFTP. No installer: unzip and run, in English, Swedish or Greek.",
       "features": [
@@ -672,15 +672,28 @@
         "Self-contained zip: nothing else to install",
         "Framework-dependent zip: .NET 8 Desktop Runtime (x64)"
       ],
-      "download": "https://github.com/josfam76/neoapps/releases/download/neocommander-1.0.0/NeoCommander-1.0.0-win-x64.zip",
-      "filename": "NeoCommander-1.0.0-win-x64.zip",
-      "sizeBytes": 69039398,
+      "download": "https://github.com/josfam76/neoapps/releases/download/neocommander-1.0.1/NeoCommander-1.0.1-win-x64.zip",
+      "filename": "NeoCommander-1.0.1-win-x64.zip",
+      "sizeBytes": 69287239,
       "screenshot": "images/neocommander/1-ultramodern.png",
       "icon": "images/neocommander-icon.png",
       "comingSoon": false,
       "prerelease": false,
       "run": "Unzip and run NeoCommander/NeoCommander.exe. There is no installer.",
       "changelog": [
+        {
+          "version": "1.0.1",
+          "date": "2026-11-26",
+          "changes": [
+            "Fixed: a removed USB stick (or card, disc or mapped network drive) stayed in the navigation tree as if it were still connected. Drives are now detected live: Windows' device messages (WM_DEVICECHANGE, volume arrival and removal) trigger a check right away, with a light background check every 3 s as a fallback. This PC in the tree, the drive drop-down, the Alt+F1/Alt+F2 menus and This PC listings update by themselves, without touching the rest of the tree.",
+            "A panel or tab showing a drive that was removed (or a folder or archive on it) moves to This PC instead of showing an error; its folder watcher is let go first, so it does not keep the device busy.",
+            "A different USB stick that gets the same letter now shows its own name (drive names and sizes are no longer cached across a removal).",
+            "Fixed: the copy speed in File operations blinked (it disappeared between measurements). The card now always shows `0 of 2 files · 251 MB / 910 MB · 85.3 MB/s · 8 s left`: speed and time left are averaged over the last 3 s, updated every 0.5 s, keep their last value between updates, show \"—\" only before the first measurement and \"Paused\" while paused. Fixed-width slots with tabular digits keep the line from jumping. The status bar shows the same speed.",
+            "Fixed: clicking a drive or folder in the navigation tree sometimes did nothing. An automatic refresh of the folder the panel was leaving (a busy network share, a finished copy, a drive check) cancelled the navigation the click had just started, so the panel silently stayed put. A refresh now never cancels a navigation to another folder.",
+            "The tree always opens the clicked item in the active panel, also when it is already selected, and Enter or the arrow keys (after a short pause) do the same. The status bar now says what happened (\"C:\\ opened in the right panel\", \"already open … (refreshed)\" or the error), and errors are also written to neocommander.log next to config.json.",
+            "The inactive panel's tabs are dimmed, so it is easier to see which panel the tree, the F-keys and the menus act on."
+          ]
+        },
         {
           "version": "1.0.0",
           "date": "2026-11-25",
@@ -704,11 +717,16 @@
       "placeholder": false,
       "altDownloads": [
         {
-          "filename": "NeoCommander-1.0.0-win-x64-small.zip",
+          "filename": "NeoCommander-1.0.1-win-x64-small.zip",
           "label": "Framework-dependent (needs .NET 8 Desktop Runtime)",
-          "sizeBytes": 17795718,
-          "download": "https://github.com/josfam76/neoapps/releases/download/neocommander-1.0.0/NeoCommander-1.0.0-win-x64-small.zip"
+          "sizeBytes": 18041896,
+          "download": "https://github.com/josfam76/neoapps/releases/download/neocommander-1.0.1/NeoCommander-1.0.1-win-x64-small.zip"
         }
+      ],
+      "screenshots": [
+        "images/neocommander/1-ultramodern.png",
+        "images/neocommander/2-settings.png",
+        "images/neocommander/3-classic.png"
       ]
     }
   ]
